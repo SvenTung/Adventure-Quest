@@ -13,4 +13,5 @@ public class GeneralGrevious extends Enemy {
         character.loseHP(40);
     }
 
+
 }

@@ -1,4 +1,6 @@
+import Behaviours.IHealth;
 import Enemy.Enemy;
+import Class.*;
 
 import java.util.Scanner;
 
@@ -43,13 +45,31 @@ public class UI {
         sc.nextLine();
     }
 
-    public String firstTurn(){
-        Scanner sc = new Scanner(System.in);
+    public void firstTurn(){
         System.out.println("A wild General Grevious appears. Catching your party by surprise he attempts to slash at the barbarian with his lightsaber. Your barbarian quickly dives out of the way.");
         System.out.println("Your party quickly recovers and the battle begins.");
-        System.out.println("It is the barbarian's turn. He can attack or he can throw the fire potion.");
+    }
+
+    public String barbarianTurn(Barbarian barbarian){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("It is the barbarian's turn. He has " + getHP(barbarian) + " hitpoints left and " + barbarian.getRage() + " rage.");
+        System.out.println("He can only attack for now.");
         String choice = sc.nextLine();
         return choice;
+    }
+
+    public void barbarianRage(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("It is the barbarian's turn. He rages!");
+        sc.nextLine();
+        System.out.println("He enters a wild frenzy and begins a reckless assault on Grevious.");
+        sc.nextLine();
+        System.out.println("General Grevious manages to defend a few strikes from the barbarian but is slowing down");
+        sc.nextLine();
+        System.out.println("General Grevious desperately attempts a hail mary strike aimed at the barbarian's head");
+        sc.nextLine();
+        System.out.println("The barbarian parries Grevious' last strike and beheads General Grevious");
+        sc.nextLine();
     }
 
     public void barbarianAttacks(){
@@ -88,5 +108,17 @@ public class UI {
 
     public void mageFireball(){
         System.out.println("The mage conjures a fireball and throws it from his hand at General Grevious");
+    }
+
+    public void ggsTurn(){
+        System.out.println("General Grevious takes his turn. He swipes wildly at the barbarian. Dealing 10 damage to the barbarian");
+    }
+
+    public void ggOPTurn(){
+        System.out.println("General Grevious uses his OP ability 'lightsaber whirlwind' and deals 10x4 damage to the barbarian");
+    }
+
+    private int getHP(IHealth character){
+        return character.getHP();
     }
 }

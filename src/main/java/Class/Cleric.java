@@ -23,6 +23,10 @@ public class Cleric extends Class implements ICast, IConsume{
         }
     }
 
+    public int getMana() {
+        return mana;
+    }
+
     public void gainMana(int value){
         this.mana += value;
         if (this.mana > 100){

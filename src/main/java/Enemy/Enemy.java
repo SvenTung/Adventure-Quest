@@ -19,6 +19,10 @@ public class Enemy implements IHealth{
 
     public void healHP(int value) { this.HP += value; }
 
+    public int getHP() {
+        return HP;
+    }
+
     public void loseHP(int value) {
         this.HP -= value;
     }

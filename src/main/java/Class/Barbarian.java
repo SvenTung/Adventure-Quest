@@ -24,6 +24,10 @@ public class Barbarian extends Class implements IRage, IConsume {
         }
     }
 
+    public int getRage() {
+        return rage;
+    }
+
     public void resetRage(){
         this.rage = 0;
     }

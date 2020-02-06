@@ -5,4 +5,6 @@ public interface IHealth {
     void loseHP(int value);
 
     void healHP(int value);
+
+    int getHP();
 }

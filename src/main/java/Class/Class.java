@@ -29,6 +29,10 @@ public abstract class Class implements IHealth, IConsume{
         this.HP -= value;
     }
 
+    public int getHP() {
+        return HP;
+    }
+
     public void drinkHealingPotion(Potion potion){
         this.healHP(Potion.HEALINGPOTION.getValue());
     }

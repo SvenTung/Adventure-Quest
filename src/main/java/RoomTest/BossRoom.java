@@ -1,4 +1,4 @@
-package Room;
+package RoomTest;
 
 public class BossRoom {
 }

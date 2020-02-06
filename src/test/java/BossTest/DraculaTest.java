@@ -1,4 +1,4 @@
-package Boss;
+package BossTest;
 
 public class DraculaTest {
 }

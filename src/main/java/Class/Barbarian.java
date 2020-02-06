@@ -1,9 +1,8 @@
 package Class;
 
 import Behaviours.IConsume;
+import Behaviours.IEnemy;
 import Behaviours.IRage;
-import Potion.Potion;
-import Weapon.Weapon;
 
 import java.util.ArrayList;
 
@@ -22,18 +21,12 @@ public class Barbarian extends Class implements IRage, IConsume {
         this.classID = "Barbarian";
     }
 
-    public void attack() {
-
+    public void increaseRage(int incrementValue){
+        this.rage *= incrementValue;
     }
 
-
-
-    public void increaseRage(){
-        this.rage *
-    }
-
-    public void loseHP(int value){
-        this.HP -= value;
+    public void resetRage(){
+        this.rage = 0;
     }
 
     public void healHP(int value){
@@ -41,6 +34,14 @@ public class Barbarian extends Class implements IRage, IConsume {
             return;
         }
         this.HP += value;
+    }
+
+    public void useFirePotion(IEnemy enemy){
+
+    }
+
+    public void pickUpPotion(Potion potion){
+
     }
 
 

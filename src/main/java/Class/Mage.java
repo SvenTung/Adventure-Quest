@@ -2,6 +2,7 @@ package Class;
 
 import Behaviours.ICast;
 import Behaviours.IConsume;
+import com.sun.crypto.provider.HmacMD5KeyGenerator;
 
 import java.util.ArrayList;
 
@@ -18,17 +19,17 @@ public class Mage extends Class implements ICast, IConsume{
         this.classID = "Mage";
     }
 
-    public int attack(Weapon equippedWeapon) {
-        int damageValue = equippedWeapon.getDamage();
-        return damageValue;
-    }
-
     public void healHP(int value){
         this.HP += value;
         if (this.HP > 100){
             this.HP = 100;
         }
     }
+
+    public void drinkManaPotion(Potion potion){
+        this.gainMana(Potion.MANAPOTION.getValue());
+    }
+
 
     public void loseHP(int value){
         this.HP -= value;

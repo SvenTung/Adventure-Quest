@@ -20,10 +20,6 @@ public class Cleric extends Class implements ICast, IConsume{
         this.classID = "cleric";
     }
 
-    public int attack(Weapon weapon) {
-        return weapon.getDamage();
-    }
-
     public void healHP(int value){
         this.HP += value;
         if (this.HP > 200){

@@ -1,12 +1,13 @@
 package Class;
 
+import Behaviours.IConsume;
 import Behaviours.IRage;
 import Potion.Potion;
 import Weapon.Weapon;
 
 import java.util.ArrayList;
 
-public class Barbarian extends Class implements IRage {
+public class Barbarian extends Class implements IRage, IConsume {
 
 
     ArrayList<Potion> potions;
@@ -28,6 +29,18 @@ public class Barbarian extends Class implements IRage {
     public void increaseRage(){
         this.rage *
     }
+
+    public void loseHP(int value){
+        this.HP -= value;
+    }
+
+    public void healHP(int value){
+        if(this.HP == 150){
+            return;
+        }
+        this.HP += value;
+    }
+
 
 
 

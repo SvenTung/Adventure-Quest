@@ -1,4 +1,4 @@
-package Boss;
+package Enemy.Boss;
 
 public class Dracula {
 }

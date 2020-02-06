@@ -1,9 +1,8 @@
 package Enemy;
 
-import Behaviours.IEnemy;
 import Behaviours.IHealth;
 
-public class Enemy implements IHealth, IEnemy {
+public class Enemy implements IHealth{
 
     private int HP;
 
@@ -13,12 +12,8 @@ public class Enemy implements IHealth, IEnemy {
 
     public void attack();
 
-    @Override
-    public void healHP(int value) {
+    public void healHP(int value) { this.HP += value; }
 
-    }
-
-    @Override
     public void loseHP(int value) {
         this.HP -= value;
     }

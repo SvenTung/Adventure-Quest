@@ -1,7 +1,6 @@
 package Class;
 
 import Behaviours.IConsume;
-import Behaviours.IEnemy;
 import Behaviours.IRage;
 
 import java.util.ArrayList;
@@ -13,12 +12,10 @@ public class Barbarian extends Class implements IRage, IConsume {
     Weapon equippedWeapon;
     int HP;
     int rage;
-    private String classID;
 
     Barbarian(Weapon equippedWeapon, ArrayList<Potion> potions){
         super(equippedWeapon, potions, 150);
         this.rage = 0;
-        this.classID = "Barbarian";
     }
 
     public void increaseRage(int incrementValue){

@@ -7,7 +7,7 @@ public interface IConsume {
 
     void drinkHealingPotion(Potion potion);
 
-    void useFirePotion(IEnemy enemy);
+    void useFirePotion(Enemy enemy);
 
     void pickUpPotion(Potion potion);
 

@@ -2,7 +2,6 @@ package Class;
 
 import Behaviours.ICast;
 import Behaviours.IConsume;
-import com.sun.crypto.provider.HmacMD5KeyGenerator;
 
 import java.util.ArrayList;
 
@@ -12,11 +11,9 @@ public class Mage extends Class implements ICast, IConsume{
     private Weapon equippedWeapon;
     private int HP;
     private int mana;
-    private String classID;
 
     Mage(Weapon equippedWeapon, ArrayList<Potion> potions){
         super(equippedWeapon, potions, 100);
-        this.classID = "Mage";
     }
 
     public void healHP(int value){

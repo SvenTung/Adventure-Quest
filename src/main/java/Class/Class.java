@@ -1,7 +1,6 @@
 package Class;
 
 import Behaviours.IConsume;
-import Behaviours.IEnemy;
 import Behaviours.IHealth;
 
 import java.util.ArrayList;
@@ -33,7 +32,7 @@ public abstract class Class implements IHealth, IConsume{
         this.healHP(Potion.HEALINGPOTION.getValue());
     }
 
-    public void useFirePotion(IEnemy enemy) {
+    public void useFirePotion(Enemy enemy) {
         enemy.loseHP(Potion.FIREPOTION.getValue());
     }
 

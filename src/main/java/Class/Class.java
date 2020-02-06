@@ -2,14 +2,15 @@ package Class;
 
 import Behaviours.IConsume;
 import Behaviours.IHealth;
+import Enemy.Enemy;
 
 import java.util.ArrayList;
 
 public abstract class Class implements IHealth, IConsume{
 
-    Weapon weapon;
-    ArrayList<Potion> potions;
-    int HP;
+    private Weapon weapon;
+    private ArrayList<Potion> potions;
+    private int HP;
 
 
     public Class(Weapon weapon, ArrayList<Potion> potions, int HP){

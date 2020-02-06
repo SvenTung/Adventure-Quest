@@ -10,7 +10,7 @@ public class Enemy implements IHealth{
         this.HP = HP;
     }
 
-    public void attack();
+//    public void attack();
 
     public void healHP(int value) { this.HP += value; }
 

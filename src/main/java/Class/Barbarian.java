@@ -7,19 +7,21 @@ import java.util.ArrayList;
 
 public class Barbarian extends Class implements IRage, IConsume {
 
-
-    ArrayList<Potion> potions;
-    Weapon equippedWeapon;
-    int HP;
-    int rage;
+    private ArrayList<Potion> potions;
+    private Weapon equippedWeapon;
+    private int HP;
+    private int rage;
 
     Barbarian(Weapon equippedWeapon, ArrayList<Potion> potions){
         super(equippedWeapon, potions, 150);
         this.rage = 0;
     }
 
-    public void increaseRage(int incrementValue){
-        this.rage *= incrementValue;
+    public void increaseRage(int value){
+        this.rage += value;
+        if (this.rage > 100){
+            this.rage = 100;
+        }
     }
 
     public void resetRage(){

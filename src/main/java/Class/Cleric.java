@@ -2,17 +2,16 @@ package Class;
 
 import Behaviours.ICast;
 import Behaviours.IConsume;
+import Behaviours.IHealth;
 
 import java.util.ArrayList;
 
 public class Cleric extends Class implements ICast, IConsume{
 
-    private ArrayList<Potion> potions;
-    private Weapon equippedWeapon;
     private int HP;
     private int mana;
 
-    Cleric(Weapon equippedWeapon, ArrayList<Potion> potions){
+    public Cleric(Weapon equippedWeapon, ArrayList<Potion> potions){
         super(equippedWeapon, potions, 200);
         this.mana = 100;
     }
@@ -26,6 +25,9 @@ public class Cleric extends Class implements ICast, IConsume{
 
     public void gainMana(int value){
         this.mana += value;
+        if (this.mana > 100){
+            this.mana = 100;
+        }
     }
 
     public void useMana(int value){
@@ -35,5 +37,14 @@ public class Cleric extends Class implements ICast, IConsume{
     public void drinkManaPotion(Potion potion){
         this.gainMana(Potion.MANAPOTION.getValue());
     }
+
+    public void heal(IHealth character){
+        if (this.mana > 25) {
+            this.useMana(25);
+            character.healHP((int)(Math.random() * 6) + 10);
+        }
+    }
+
+    
 
 }

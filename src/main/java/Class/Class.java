@@ -3,11 +3,10 @@ package Class;
 import Behaviours.IConsume;
 import Behaviours.IEnemy;
 import Behaviours.IHealth;
-import Behaviours.IWield;
 
 import java.util.ArrayList;
 
-public abstract class Class implements IHealth, IWield, IConsume{
+public abstract class Class implements IHealth, IConsume{
 
     Weapon weapon;
     ArrayList<Potion> potions;

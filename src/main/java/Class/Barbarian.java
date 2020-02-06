@@ -30,22 +30,9 @@ public class Barbarian extends Class implements IRage, IConsume {
     }
 
     public void healHP(int value){
-        if(this.HP == 150){
-            return;
-        }
         this.HP += value;
+        if (this.HP > 150){
+            this.HP = 150;
+        }
     }
-
-    public void useFirePotion(IEnemy enemy){
-
-    }
-
-    public void pickUpPotion(Potion potion){
-
-    }
-
-
-
-
-
 }

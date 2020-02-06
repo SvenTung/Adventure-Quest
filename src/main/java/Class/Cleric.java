@@ -45,6 +45,6 @@ public class Cleric extends Class implements ICast, IConsume{
         }
     }
 
-    
+
 
 }

@@ -19,10 +19,13 @@ public abstract class Class implements IHealth, IWield, IConsume{
         this.HP = HP;
     }
 
-    public void attack(){}
+    public int attack(Weapon weapon){}
 
-    public void healDamage(){}
+    public void healHP(int value){}
 
-    public void takeDamage(){}
+    public void loseHP(int value){}
 
+    public void gainMana(int value){}
+
+    public void useMana(int value){}
 }

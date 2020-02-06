@@ -11,14 +11,16 @@ public class Cleric extends Class implements ICast, IConsume{
     private Weapon equippedWeapon;
     private int HP;
     private int mana;
+    private String classID;
 
     Cleric(Weapon equippedWeapon, ArrayList<Potion> potions){
         super(equippedWeapon, potions, 200);
         this.mana = 100;
+        this.classID = "cleric";
     }
 
-    public void attack() {
-
+    public int attack(Weapon weapon) {
+        return weapon.getDamage();
     }
 
     public void healHP(int value){
@@ -40,7 +42,13 @@ public class Cleric extends Class implements ICast, IConsume{
         this.mana -= value;
     }
 
-    public void usePotion(Potion potion){
-
+    public void usePotion(Potion potion, Class character){
+        if (potion == Potion.HEALINGPOTION){
+            character.healHP(Potion.HEALINGPOTION.getValue());
+        } else {
+            if (character.getClassID != "barbarian"){
+                character.gainMana(Potion.MANAPOTION.getValue());
+            }
+        }
     }
 }

@@ -39,4 +39,6 @@ public class Cleric extends Class implements ICast, IConsume{
     public void useMana(int value){
         this.mana -= value;
     }
+
+    public u
 }

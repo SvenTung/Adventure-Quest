@@ -2,6 +2,7 @@ package Class;
 
 import Behaviours.ICast;
 import Behaviours.IConsume;
+import com.sun.crypto.provider.HmacMD5KeyGenerator;
 
 import java.util.ArrayList;
 
@@ -29,6 +30,12 @@ public class Mage extends Class implements ICast, IConsume{
             this.HP = 100;
         }
     }
+
+    public void usePotion(Potion potion){
+                gainMana(Potion.MANAPOTION.getValue());
+    }
+
+
 
     public void loseHP(int value){
         this.HP -= value;

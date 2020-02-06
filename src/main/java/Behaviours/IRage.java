@@ -2,7 +2,7 @@ package Behaviours;
 
 public interface IRage {
 
-    void increaseRage();
+    void increaseRage(int incrementValue);
 
     void resetRage();
 

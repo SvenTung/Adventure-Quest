@@ -5,7 +5,7 @@ import Enemy.Enemy;
 
 public interface IConsume {
 
-    void drinkPotion(Potion potion, Class character);
+    void drinkHealingPotion(Potion potion);
 
     void useFirePotion(IEnemy enemy);
 

@@ -1,6 +1,7 @@
 package Class;
 
 import Behaviours.IConsume;
+import Behaviours.IEnemy;
 import Behaviours.IHealth;
 import Behaviours.IWield;
 
@@ -19,13 +20,25 @@ public abstract class Class implements IHealth, IWield, IConsume{
         this.HP = HP;
     }
 
-    public int attack(Weapon weapon){}
+    public int attack(Weapon weapon){
+        return weapon.getDamage();
+    }
 
     public void healHP(int value){}
 
-    public void loseHP(int value){}
+    public void loseHP(int value){
+        this.HP -= value;
+    }
 
-    public void gainMana(int value){}
+    public void drinkHealingPotion(Potion potion){
+        this.healHP(Potion.HEALINGPOTION.getValue());
+    }
 
-    public void useMana(int value){}
+    public void useFirePotion(IEnemy enemy) {
+        enemy.loseHP(Potion.FIREPOTION.getValue());
+    }
+
+    public void pickUpPotion(Potion potion) {
+        this.potions.add(potion);
+    }
 }

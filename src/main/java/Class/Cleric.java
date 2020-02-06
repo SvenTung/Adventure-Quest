@@ -2,6 +2,7 @@ package Class;
 
 import Behaviours.ICast;
 import Behaviours.IConsume;
+import Behaviours.IEnemy;
 
 import java.util.ArrayList;
 
@@ -30,10 +31,6 @@ public class Cleric extends Class implements ICast, IConsume{
         }
     }
 
-    public void loseHP(int value){
-        this.HP -= value;
-    }
-
     public void gainMana(int value){
         this.mana += value;
     }
@@ -42,13 +39,8 @@ public class Cleric extends Class implements ICast, IConsume{
         this.mana -= value;
     }
 
-    public void usePotion(Potion potion, Class character){
-        if (potion == Potion.HEALINGPOTION){
-            character.healHP(Potion.HEALINGPOTION.getValue());
-        } else {
-            if (character.getClassID != "barbarian"){
-                character.gainMana(Potion.MANAPOTION.getValue());
-            }
-        }
+    public void drinkManaPotion(Potion potion){
+        this.gainMana(Potion.MANAPOTION.getValue());
     }
+
 }

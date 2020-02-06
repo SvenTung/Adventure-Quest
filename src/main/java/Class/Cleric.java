@@ -40,5 +40,7 @@ public class Cleric extends Class implements ICast, IConsume{
         this.mana -= value;
     }
 
-    public u
+    public void usePotion(Potion potion){
+
+    }
 }

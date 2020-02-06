@@ -1,10 +1,14 @@
 package Behaviours;
 
 import Class.Potion;
+import Enemy.Enemy;
 
 public interface IConsume {
-    void usePotion(Potion potion);
+
+    void drinkPotion(Potion potion, Class character);
+
+    void useFirePotion(IEnemy enemy);
 
     void pickUpPotion(Potion potion);
-    
+
 }

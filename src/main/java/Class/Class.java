@@ -1,13 +1,12 @@
 package Class;
 
 import Behaviours.IConsume;
-import Behaviours.IEnemy;
 import Behaviours.IHealth;
-import Behaviours.IWield;
+import Enemy.Enemy;
 
 import java.util.ArrayList;
 
-public abstract class Class implements IHealth, IWield, IConsume{
+public abstract class Class implements IHealth, IConsume{
 
     Weapon weapon;
     ArrayList<Potion> potions;
@@ -34,7 +33,7 @@ public abstract class Class implements IHealth, IWield, IConsume{
         this.healHP(Potion.HEALINGPOTION.getValue());
     }
 
-    public void useFirePotion(IEnemy enemy) {
+    public void useFirePotion(Enemy enemy) {
         enemy.loseHP(Potion.FIREPOTION.getValue());
     }
 

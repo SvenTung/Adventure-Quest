@@ -2,7 +2,6 @@ package Class;
 
 import Behaviours.ICast;
 import Behaviours.IConsume;
-import Behaviours.IEnemy;
 
 import java.util.ArrayList;
 
@@ -12,12 +11,10 @@ public class Cleric extends Class implements ICast, IConsume{
     private Weapon equippedWeapon;
     private int HP;
     private int mana;
-    private String classID;
 
     Cleric(Weapon equippedWeapon, ArrayList<Potion> potions){
         super(equippedWeapon, potions, 200);
         this.mana = 100;
-        this.classID = "cleric";
     }
 
     public void healHP(int value){

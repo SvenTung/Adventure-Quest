@@ -1,4 +1,14 @@
 package Enemy;
 
-public class Enemy {
+import Behaviours.IHealth;
+
+public class Enemy implements IHealth {
+
+
+    public Enemy(){
+
+    }
+
+    public void attack();
+
 }

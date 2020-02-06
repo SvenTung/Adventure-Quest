@@ -11,7 +11,9 @@ public class Enemy implements IHealth, IEnemy {
         this.HP = HP;
     }
 
-    public void attack();
+    public void attack(Class character){
+
+    };
 
     @Override
     public void healHP(int value) {

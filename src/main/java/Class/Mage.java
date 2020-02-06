@@ -11,13 +11,16 @@ public class Mage extends Class implements ICast, IConsume{
     private Weapon equippedWeapon;
     private int HP;
     private int mana;
+    private String classID;
 
     Mage(Weapon equippedWeapon, ArrayList<Potion> potions){
         super(equippedWeapon, potions, 100);
+        this.classID = "Mage";
     }
 
-    public void attack() {
-
+    public int attack(Weapon equippedWeapon) {
+        int damageValue = equippedWeapon.getDamage();
+        return damageValue;
     }
 
     public void healHP(int value){

@@ -1,4 +1,4 @@
-package Enemy;
+package EnemyTest;
 
 public class JesterTest {
 }

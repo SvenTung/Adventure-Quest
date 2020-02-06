@@ -1,4 +1,4 @@
-package Class;
+package ClassTest;
 
 public class ClericTest {
 }

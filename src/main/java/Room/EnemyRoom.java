@@ -1,4 +1,4 @@
-package RoomTest;
+package Room;
 
 public class EnemyRoom {
 }
